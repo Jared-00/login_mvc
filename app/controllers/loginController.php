@@ -25,16 +25,11 @@ if ($datosUsuario) {
         $_SESSION["usuario_id"] = $datosUsuario["us_id"];
         $_SESSION["nombre"] = $datosUsuario["us_nombre"];
         $_SESSION["correo"] = $datosUsuario["us_correo"];
-
         header("Location: ../views/dashboard/index.php");
         exit();
-
     } else {
         echo "Contraseña incorrecta";
     }
-
 } else {
-
     echo "El usuario no existe";
-
 }
