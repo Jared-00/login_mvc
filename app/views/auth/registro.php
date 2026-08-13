@@ -17,7 +17,7 @@
 
             <input type="text" name="nombre" placeholder="Nombre" required>
 
-            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
 
             <input type="tel" name="telefono" placeholder="Teléfono" maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required >
 

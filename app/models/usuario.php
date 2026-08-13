@@ -12,13 +12,13 @@ class Usuario
         $this->conexion = $database->conectar();
     }
 
-    public function buscarPorEmail($email) 
+    public function buscarPorCorreo($correo) 
     {
-        $sql = "SELECT * FROM us_usuarios WHERE us_correo = :email";
+        $sql = "SELECT * FROM us_usuarios WHERE us_correo = :correo";
 
         $consulta = $this->conexion->prepare($sql);
 
-        $consulta->bindParam(":email", $email);
+        $consulta->bindParam(":correo", $correo);
 
         $consulta->execute();
 
@@ -27,7 +27,7 @@ class Usuario
 
     public function registrar($nombre, $email, $telefono, $password) //registrar usuario
     { 
-        $sql = "INSERT INTO us_usuarios (us_nombre, us_correo, us_telefono, us_apellidos)
+        $sql = "INSERT INTO us_usuarios (us_nombre, us_correo, us_telefono, us_pass)
                         VALUES (:nombre, :email, :telefono, :password)";
 
         $consulta = $this->conexion->prepare($sql);

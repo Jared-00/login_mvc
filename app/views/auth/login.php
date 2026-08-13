@@ -15,9 +15,9 @@
 
         <h1>Iniciar sesión</h1>
 
-        <form action="../../../app/controllers/LoginController.php" method="POST">
+        <form action="../../../app/controllers/loginController.php" method="POST">
 
-            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
 
             <input type="password" name="password" placeholder="Contraseña" required>
 

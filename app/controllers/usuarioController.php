@@ -5,23 +5,23 @@ require_once "../models/Usuario.php";
 $usuario = new Usuario();
 
 $nombre = $_POST["nombre"];
-$email = $_POST["email"];
+$correo = $_POST["correo"];
 $telefono = $_POST["telefono"];
 $password = $_POST["password"];
 
-// $passwordHash = password_hash(
-//     $password,
-//     PASSWORD_DEFAULT
-// );
+$passwordHash = password_hash(
+    $password,
+    PASSWORD_DEFAULT
+);
 
 try {
 
     $usuario->registrar(
         $nombre,
-        $email,
+        $correo,
         $telefono,
-        // $passwordHash
-        $password
+        $passwordHash
+        // $password
 
     );
 

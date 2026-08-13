@@ -19,9 +19,7 @@ if (!isset($_SESSION["usuario_id"])) {
 <head>
 
     <meta charset="UTF-8">
-
     <title>Dashboard</title>
-
 </head>
 
 <body>
@@ -37,7 +35,7 @@ if (!isset($_SESSION["usuario_id"])) {
 
     <p>
         Correo:
-        <?php echo $_SESSION["email"]; ?>
+        <?php echo $_SESSION["correo"]; ?>
     </p>
 
     <a href="../../controllers/LogoutController.php">
